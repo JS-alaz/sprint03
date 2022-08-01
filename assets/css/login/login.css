@@ -1,0 +1,75 @@
+.login{
+    background: #E5E5E5;
+    display: flex;/*hace que los elementos se alineen verticalmente y que los elementos sean del alto del contenedor, de igual forma se se cambia la orienacion tomaran todo el ancho del contenedor  */
+    flex-direction: column;
+    align-items: center;/* con esta alineacion regresan a su tamaño por defecto */
+    padding: 20% 0;
+    gap: 1rem;/* si funciona */
+}
+
+.login>h2{
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #464646;
+}
+
+.login>input{
+    width: 275px;
+    height: 41px;   
+    background: #FFFFFF;
+    border-color: transparent transparent lightgray transparent;
+    border-radius: 4px;
+    box-shadow: #464646;/* no se bien como hacer esto */
+    font-family: 'Raleway', sans-serif;/* text styles */
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.login>input:last-child{
+    background-color: #2A7AE4;
+    color: #FFFFFF;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    width: 109px;
+    height: 40px;
+}
+
+.login>input:last-child:hover{
+    background-color: #ffffff;
+    color: #2A7AE4;
+    -webkit-box-shadow: 10px 10px 99px 6px rgba(76,201,240,1);
+    -moz-box-shadow: 10px 10px 99px 6px rgba(76,201,240,1);
+    box-shadow: 10px 10px 99px 6px rgba(76,201,240,1);
+}
+
+@media(min-width: 426px){
+    .login{
+        padding: 10%;
+    }
+}
+
+@media(min-width: 769px){
+    .login>h2{
+        font-size: 18px
+    }
+
+    .login>input{
+        width: 423px;
+        height: 63px;
+    }
+
+    .login>input:last-child{
+        width: 423px;
+        height: 63px;
+        font-size: 18px;
+    }
+}
+

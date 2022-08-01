@@ -1,0 +1,44 @@
+{
+  "producto": [
+    {
+      "url": "test",
+      "categoria": "test",
+      "nombre": "test",
+      "precio": "test",
+      "descripcion": "test",
+      "id": "82c1d32f-db36-4938-a039-739daf7d0679"
+    },
+    {
+      "url": "test2",
+      "categoria": "test2",
+      "nombre": "test2",
+      "precio": "test2",
+      "descripcion": "test2",
+      "id": "567506b1-4a18-4133-8ea3-bbd6051c601a"
+    },
+    {
+      "url": "test3",
+      "categoria": "test3",
+      "nombre": "test3",
+      "precio": "test3",
+      "descripcion": "test3",
+      "id": "e9e9a4dc-e6c3-4ee5-bbc9-2b9d6da1a4ad"
+    },
+    {
+      "url": "test4",
+      "categoria": "test4",
+      "nombre": "test4",
+      "precio": "test4",
+      "descripcion": "test4",
+      "id": "8549cb72-fc39-4911-8425-302fbcc17d07"
+    },
+    {
+      "url": "test6",
+      "categoria": "test6",
+      "nombre": "test6",
+      "precio": "test6",
+      "descripcion": "test6",
+      "id": "ab39bd0f-38b0-4be0-931a-328c50c75d97"
+    }
+  ]
+}

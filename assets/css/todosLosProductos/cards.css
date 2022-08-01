@@ -1,0 +1,245 @@
+/* 
+.cards{
+    display: grid;
+    gap: 1rem;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: space-between; no se para que habia puesto esto 
+    grid-template-areas: 
+    'head head';
+}
+
+.cards_head{
+    width: 100%;
+    height: auto;
+    grid-area: head;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 0;
+}
+
+.cards_head>h2{
+    margin: 20px 0 10px 0;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+}
+
+.cards_head>input{
+    width: 150px;
+    height: 40px;
+    border-color: transparent;
+    background: #2A7AE4;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    color: #ffffff;
+}
+
+.card{
+     width: 156px;
+    height: 174px; 
+    background-color: transparent;
+}
+
+.card_head{
+    position:relative;
+    text-align: end;
+    box-sizing: border-box;
+    margin-bottom: -25px;
+}
+
+.card_head>span{
+    margin-right: 15px;
+
+}
+
+.card, img{
+    width: 100%; si es necesario 
+    margin-bottom: .5rem;
+}
+ 
+
+*/
+
+.cards{
+    background: #E5E5E5;
+    font-family: 'Raleway', sans-serif;
+    /* display: grid; */
+   /*  gap: 1rem; */
+    width: 90%;
+    margin: 0 auto;
+    padding: 3% 0;
+    /* grid-template-areas: 
+    'head head'; */
+}
+
+.cards_head{
+    width: 100%;
+    height: auto;
+    grid-area: head;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 0;
+}
+
+.cards_head>h2{
+    margin: 20px 0 10px 0;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+}
+
+.cards_head>a>input{
+    width: 150px;
+    height: 40px;
+    border-color: transparent;
+    background: #2A7AE4;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    color: #ffffff;
+}
+
+.cards_head>a>input:hover{
+    background-color: #ffffff;
+    color: #2A7AE4;
+    -webkit-box-shadow: 10px 10px 99px 6px rgba(76,201,240,1);
+    -moz-box-shadow: 10px 10px 99px 6px rgba(76,201,240,1);
+    box-shadow: 10px 10px 99px 6px rgba(76,201,240,1);
+}
+
+/*cards 2*/
+
+.card_head{
+    width: 100%;
+    /* position:relative; */
+    text-align: end; 
+    box-sizing: border-box;
+    margin: 0 20px -25px 0;
+    z-index: 2;
+}
+
+.card_head>span{
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.container {
+    display : flex;
+    align-items : center;
+    justify-content : space-around;
+    flex-wrap : wrap;
+  }
+  
+  .container .card { 
+    background-color : #fff;
+    display : flex;
+    flex-direction : column;
+    align-items: center;
+    justify-content: center;
+    box-shadow : 0 5px 20px rgba(0,0,0,0.5);
+    transition : 0.3s ease-in-out;
+    border-radius : 15px;
+    margin: 20px 0;
+  }
+  .container .card:hover {
+    height : 200px;    
+  }
+  
+  .container .card .image {
+    text-align: center;
+    position : relative;
+    top : -20%;
+    border-radius: 15px;
+    /* box-shadow : 0 5px 20px rgba(0,0,0,0); */
+    z-index : 1;
+  }
+  
+  .container .card .image img {
+    max-width : 100%;
+    border-radius : 15px;
+  }
+  
+  .container .card .content {
+    position : relative;
+    top : -50px;
+    color : #111;
+    text-align : center;
+    visibility : hidden;
+    opacity : 0;
+    transition : 0.3s ease-in-out;
+  }
+
+  .content>h3, p{
+    margin-bottom: 5px;
+  }
+
+  .content>h3{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .content>p{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .content>a{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: #2A7AE4;
+    text-decoration: none;
+  }
+  
+  .container .card:hover .content {
+     margin-top : 55px;
+     visibility : visible;
+     opacity : 1;
+     transition-delay: 0.2s;
+  }
+
+@media(min-width: 426px){
+    .cards{
+        grid-template-areas:
+        'head head head head' ;
+    }
+
+    .cards_head{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+} 
+
+@media(min-width: 769px){
+    .cards{
+        width: 80%;
+        grid-template-areas:
+        'head head head head head head';
+    }
+
+    .cards_head>h2{
+      font-size: 32px;
+      line-height: 38px;
+    }
+
+    .cards_head>a{
+      font-size: 16px;
+      line-height: 19px;
+    }
+}

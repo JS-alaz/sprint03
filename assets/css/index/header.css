@@ -1,0 +1,127 @@
+
+.header_menu{
+    height: 72px;
+    padding: 0 5%;
+    display: grid;
+/*     gap: 1rem;*/
+    grid-template-columns: 1fr 1fr 1/2fr;
+    grid-template-areas:
+    'one two three';
+    align-items: center;/* alinea verticalmente */
+    background-color: #ffffff;
+}
+
+.menu_item{
+    height: 40px;    
+}
+
+.logo_header{
+    grid-area: one;
+    display: grid;
+/*     grid-template-columns: 22.64px 3px 35.85px 34.83px;*/
+    grid-template-columns: 45px 64px 1fr;
+    align-items: center;
+    cursor: pointer;
+}
+
+/*.logo_header>img:nth-child(2){ queda pendiente el espacio 
+    grid-column: 3/4;
+}*/
+
+.search_header{
+    grid-area: three;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.search_header>input{
+    display: none;
+    width: 272px;
+    height: 40px;
+    border-color: transparent;
+    border-radius: 20px;
+    background: #F5F5F5;
+}
+
+.search_header>img{
+    width: 17.5px;
+    height: 17.5px;
+    margin-top: 4px;
+    margin-left: -40px;
+}
+
+.button_header{
+    grid-area: two;
+}
+
+.button_header>a>input{
+    width: 100%;
+    height: 100%;
+    border-color: #2A7AE4;
+    color: #2A7AE4;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    background-color: #ffffff;/* aca quede */
+}
+
+.button_header>a>input:hover{
+    background-color: #2A7AE4;
+    color: #ffffff;
+    -webkit-box-shadow: 10px 10px 99px 6px rgba(76,201,240,1);
+    -moz-box-shadow: 10px 10px 99px 6px rgba(76,201,240,1);
+    box-shadow: 10px 10px 99px 6px rgba(76,201,240,1);
+}
+
+@media (min-width: 426px){
+    .header_menu{              /* puedo usar widths diferentes para cada elemento */
+        grid-template-columns:1fr 1fr 1fr 1fr;/* creo una columna que usare para separar un elemento de los demas */
+        grid-template-areas:
+        'one three two';
+    }
+
+   /*  .logo_header{
+        grid-template-columns: 22.64px 3px 35.85px 34.83px;
+    } */
+
+    .search_header{
+        grid-column-start: 2;/* indico donde deseo que comience la columna que deseo separar */
+        margin-left: 20px;
+    }
+
+    .search_header>input{
+        display: inline;
+    }
+
+    .button_header{
+        grid-column-start: 4;
+    }
+}
+
+@media(min-width: 769px){
+    .header_menu{
+        padding: 0 10%;
+        height: 115px;
+    }
+
+    .search_header{
+        /* margin-left: -.5rem; */
+        width: 393px;
+    }
+
+    .search_header>input{
+        width: 100%;
+    }
+
+    .button_header>input{
+        height: 60px;
+        margin-top: -10px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+    }
+}
+

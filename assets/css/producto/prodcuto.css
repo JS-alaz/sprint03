@@ -1,0 +1,91 @@
+body{
+    background: #E5E5E5;
+}
+
+.producto{
+    display: flex;
+    flex-direction: column;
+}
+
+.producto>img{
+    width: 100%;
+    height: 192px;
+}
+
+.producto_description{
+    padding: 5%;
+}
+
+.producto_description>h2{
+    height: 26px;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 26px;
+    color: #464646;
+    padding-bottom: 10px;
+}
+
+.producto_description>span{
+    height: 19px;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #464646;
+}
+
+.producto_description>p{
+    height: 128px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #464646;
+    padding-top: 10px;
+}
+
+@media(min-width: 426px){
+    .producto{
+        display: grid;
+        grid-template-columns: 254px auto;
+        padding: 3% 5%;
+   }
+
+    .producto>img{
+        height: 160px;
+    }
+
+    .producto_description{
+        padding: 0 0 0 2%;
+    }
+}
+
+@media(min-width: 769px){
+    .producto{
+        padding: 5% 10% 3%;
+        grid-template-columns: 50% auto;
+    }
+
+    .producto>img{
+        height: 403px;
+    }
+
+    .producto_description{
+        align-self: center;
+    }
+
+    .producto_description>h2{
+        font-size: 52px;
+        line-height: 61px;
+        padding-bottom: 2rem;
+    }
+
+    .producto_description>p{
+        font-size: 16px;
+        line-height: 19px;
+    }
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/index/reset.css">
+    <link rel="stylesheet" href="/assets/css/index/header.css">
+    <link rel="stylesheet" href="/assets/css/agregarProducto/agregarProducto.css">
+    <link rel="stylesheet" href="/assets/css/index/contact.css">
+    <link rel="stylesheet" href="/assets/css/index/footer.css">
+    <title>Agregar producto</title>
+</head>
+<body>
+    <header>
+        <div class="header_menu">
+            <a href="/index.html" class="logo_header menu_item">
+                <img src="/assets/img/header/control.png" alt="">
+                <img src="/assets/img/header/Alura.png" alt="">
+                <img src="/assets/img/header/Geek.png" alt="">
+            </a>
+            <div class="button_header menu_item">
+                <a href="#"><input type="button" value="Menú Administrador"></a>
+                
+            </div>
+            <div class="search_header menu_item">
+                <input type="text" placeholder="   ¿Qué deseas buscar?">
+                <img src="/assets/img/header/Vector@2x.png" alt="">
+            </div>
+        </div>
+    </header>
+
+    <!-- <section class="agregar">cambiar login por agregar?
+            
+        <input id="urlImg" type="text" placeholder="URL de la imagen">
+        <input id="nombreProducto" type="text" placeholder="Nombre del producto">
+        <input id="precioProducto" type="text" placeholder="Precio del producto">
+        <input id="categoria" type="text" placeholder="Categoría">
+        <input id="idProducto" type="text" placeholder="id del producto">
+        <input id="stock" type="text" placeholder="Unidades disponibles">
+        <textarea name="description" id="descripcionProducto" cols="30" rows="10" placeholder="Descripción del producto"></textarea>
+        <input class="btnAgregarProducto" id="btnAgregarProducto" type="button" value="Agregar Producto">
+    </section> -->
+    <section class="agregar">
+        <h2>Agregar nuevo producto</h2>
+        <form action="<!-- se redirecionara a otra vista que dice registro concluido -->" class="formulario" data-form>
+            <div class="input-container">
+                <input name="urlImg" id="urlImg" class="input" type="text" placeholder="URL de imágen" required data-url>
+                <label class="input-label" for="urlImg">URL imágen</label>
+<!--                 <span class="input-message-error">Este campo no es valido</span>
+ -->        </div>
+            <div class="input-container">
+                <input name="categoria" id="categoria" class="input" type="text" placeholder="categoria" data-categoria>
+                <label class="input-label" for="categoria">Categoría</label>
+<!--                 <span class="input-message-error">Este campo no es valido</span>
+ -->            </div>
+            <div class="input-container">
+                <input name="name" id="name" class="input" type="text" placeholder="Nombre del producto" data-nombre>
+                <label class="input-label" for="name">Nombre del producto</label>
+<!--                 <span class="input-message-error">Este campo no es valido</span>
+ -->            </div>
+            <div class="input-container">
+                <input name="precio" id="precio" class="input" type="text" placeholder="categoria" data-precio>
+                <label class="input-label" for="precio">Precio del producto</label>
+<!--                 <span class="input-message-error">Este campo no es valido</span>
+ -->            </div>
+            <div class="textarea-container">
+                <!-- <label class="textarea-label" for="descripcionProducto">Descripción del producto</label> -->
+                <textarea class="textarea" name="description" id="descripcionProducto" cols="30" rows="3" placeholder="Descripción del producto" data-descripcion></textarea>
+                
+<!--                 <span class="input-message-error">Este campo no es valido</span>
+ -->            </div>
+            <button class="button">Agregar producto</button>
+        </form>
+    </section>
+
+    <div class="contact">
+        <div class="contact_logo">
+            <img src="/assets/img/header/control.png" alt="">
+            <img src="/assets/img/header/Alura.png" alt="">
+            <img src="/assets/img/header/Geek.png" alt="">
+        </div>
+        <div class="contact_links">
+            <a href="#">Quienes somos</a>
+            <a href="#">Política de privacidad</a>
+            <a href="#">Programa de fidelidad</a>
+            <a href="#">Nuestras tiendas</a>
+            <a href="#">Quiero ser franquiciado</a>
+            <a href="#">Anúncie aquí</a>
+        </div>
+        <form>
+            <h2>Hable con nosotros</h2>
+            <input type="text" placeholder="Nombre">
+            <textarea name="" id="" cols="30" rows="10" placeholder="Escribe tu mensaje"></textarea>
+            <input type="button" value="Enviar mensaje">
+        </form>
+    </div>
+
+    <footer>
+        <h3>Desarrollado por Jorge Salazar</h3>
+        <span>2022</span>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js" integrity="sha512-UNM1njAgOFUa74Z0bADwAq8gbTcqZC8Ej4xPSzpnh0l6KMevwvkBvbldF9uR++qKeJ+MOZHRjV1HZjoRvjDfNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="module" src="/controllers/registroProducto.controller.js"></script>
+    <!-- <script type="module" src="/app.js"></script> -->
+</body>
+</html>

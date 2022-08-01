@@ -1,0 +1,156 @@
+.contact{
+    background: #EAF2FD;
+/*     width: 100%; tener en cuenta, cada vez que uso esta propiedad genera un error
+ no usar 100% en contenedores?*/    
+    padding: 10% 5%;
+    display: grid;
+    font-family: 'Raleway', sans-serif;
+}
+
+.contact_logo{
+    display: grid;
+    grid-template-columns: 40px 63px 64.7px;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact_logo img:nth-child(1){/* no se si funciona */
+    height: 29px;
+    width: 40px;
+    margin-right: 1rem;
+}
+
+.contact_logo:nth-child(2){
+    height: 18.5px;
+    width: 63px;
+}
+
+.contact_logo:nth-child(3){
+    height: 18.5px;
+    width: 64.7px;
+}
+
+.contact_links{
+    display: flex;
+    flex-direction: column;/* creo que si la direccion es en columna para centrar vertical es con esta propiedad */
+    align-items: center;
+    padding: 20px 0;
+    gap: 1rem;
+}
+
+.contact_links>a{
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #464646;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap:20px
+}
+
+form>h2{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+form>input{
+    height: 56px;
+    border-color: transparent transparent lightgray transparent;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: top;/* alinear el texto arriba */
+    color: #A2A2A2;
+    padding: 0 0 0 20px;
+}
+
+form>textarea{
+    font-family: 'Raleway', sans-serif;
+    height: 82px;
+    border-color: transparent transparent lightgray transparent;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #A2A2A2;
+    padding: 20px 0 0 20px;
+}
+
+form>textarea+input{
+    background: #2A7AE4;
+    color: #ffffff;
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    padding:0 20px ;
+    width: 150px;
+    height: 40px;
+}
+
+form>textarea+input:hover{    
+    background-color: #ffffff;
+    color: #2A7AE4;
+    -webkit-box-shadow: 10px 10px 99px 6px rgba(76,201,240,1);
+    -moz-box-shadow: 10px 10px 99px 6px rgba(76,201,240,1);
+    box-shadow: 10px 10px 99px 6px rgba(76,201,240,1);
+}
+
+
+@media(min-width: 426px){
+    .contact{
+        padding: 5% ;
+        grid-template-areas:
+        'one three'
+        'two three';
+    }
+
+    .contact_logo{
+        grid-area: one;
+        justify-content: flex-start;
+    }
+
+    .contact_links{
+        grid-area: two;
+        align-items: flex-start;
+    }
+
+    form{
+        grid-area: three;
+    }
+}
+
+@media(min-width: 769px){
+    .contact{
+        padding: 3% 10%;
+        grid-template-areas:
+        'one two three';
+        align-items: flex-start;
+    }
+
+    .contact_logo{
+        grid-area: one;
+    }
+
+    .contact_links{
+        grid-area: two;
+        padding: 0;
+    }
+
+    form{
+        grid-area: three;
+    }
+
+    form>textarea+input{
+        height: 51px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+    }
+}

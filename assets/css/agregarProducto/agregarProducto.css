@@ -1,0 +1,217 @@
+.agregar{
+    background: #E5E5E5;
+    display: flex;/*hace que los elementos se alineen verticalmente y que los elementos sean del alto del contenedor, de igual forma se se cambia la orienacion tomaran todo el ancho del contenedor  */
+    flex-direction: column;
+    align-items: center;/* con esta alineacion regresan a su tamaño por defecto */
+    padding: 5%;
+    gap: 1rem;/* si funciona */
+}
+
+.agregar>h2{
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+    color: #464646;
+    align-self: flex-start;
+}
+
+/* .agregar>form>input, textarea{
+    width: 100%;
+    height: 56px;   
+    background: #FFFFFF;
+    border-color: transparent transparent lightgray transparent;
+    border-radius: 4px;
+    box-shadow: #464646;  
+    font-family: 'Raleway', sans-serif;
+} */
+
+/* .agregar>textarea{
+    height: 82px;
+}
+ */
+/* .agregar>input:last-child{
+    background-color: #2A7AE4;
+    color: #FFFFFF;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    width: 100%;
+    height: 51px;
+    border-radius: 0;
+} */
+
+/* .agregar>input:last-child:hover{
+    background-color: #ffffff;
+    color: #2A7AE4;
+    -webkit-box-shadow: 10px 10px 99px 6px rgba(76,201,240,1);
+    -moz-box-shadow: 10px 10px 99px 6px rgba(76,201,240,1);
+    box-shadow: 10px 10px 99px 6px rgba(76,201,240,1);
+}
+ */
+/*----------------------------------------------------------------------*/
+.formulario{
+    width: 100%;
+    font-family: 'Raleway', sans-serif;
+}
+.form__label {/* aun no hace nada */
+    font-size: 22px;
+    margin-bottom: 1rem;
+  }
+
+  .input-container {
+    position: relative;
+    /* margin-bottom: .3rem; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-sizing: border-box;
+  }
+  
+  .input {
+    box-sizing: border-box;
+    border: 1px solid #d6eaff;;
+    border-bottom: 2px solid #C8C8C8;
+    border-radius: 5px 5px 0 0 ;
+    padding: 1.375rem 0.5rem 0.5rem;
+    /* height: .25rem; */
+    font-size: 22px;
+    color: #464646;
+    /* font-weight: 300; */
+    width: 100%;
+  }
+  
+  .input::placeholder {
+    visibility: hidden;
+    color: #A2A2A2;
+  }
+  
+  .input:focus {
+    outline: none;
+  }
+  
+  .input-label {
+    position: absolute;
+    top: 1.375rem;
+    left: 0.5rem;
+    font-size: 18px;
+    transition: all 0.25s;
+    color: #A2A2A2;
+  }
+  
+  .input:not(:placeholder-shown) + .input-label,
+  .input:focus + .input-label {
+    font-size: 0.875rem;
+    top: 0.25rem;
+    transition: all 0.25s;
+    color: #A2A2A2;
+  }
+
+  .textarea-container {
+    position: relative;
+    /* margin-top: 2rem; */
+    /* margin-bottom: 1rem; */
+  }
+
+  .textarea {
+    box-sizing: border-box;
+    border: 1px solid #d6eaff;
+    padding: 0.5rem;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 22px;
+    font-family: 'Raleway', sans-serif;
+    color: #464646;
+    /* 
+    min-height: 3rem; */
+  }
+  .textarea::placeholder {
+    font-size: 18px;
+    color: #A2A2A2;
+  }
+  
+  .textarea:focus {/* quita las lineas cuando se hace focus */
+    outline: none;
+  }
+  
+  .textarea-label {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    font-size: 20px;
+    transition: all 0.25s;
+  }
+  
+  .textarea:not(:placeholder-shown) + .textarea-label,
+  .textarea:focus + .textarea-label {
+    font-size: 0.875rem;
+    top: -1.25rem;
+    transition: all 0.25s;
+  }
+
+  .button {
+    display: block;
+    background-color: #0071ea;
+    border-color: transparent;
+    border-radius: 7px;
+    width: 100%;
+/*     margin-top: 1rem;
+ */    /* max-width: 20rem; */
+    padding: 1.125rem;
+    box-sizing: border-box;
+    color: white;
+    font-size: 22px;
+    align-self: center;
+    text-align: center;
+  }
+  .button:hover{
+    color: #0071ea;
+    background-color: white;
+    border-color: #0071ea;
+  }
+
+  .simple-button {
+    border: none;
+    background-color: unset;
+  }
+  
+  
+
+@media(min-width: 426px){
+    .agregar{
+        padding: 5%;
+    }
+}
+
+@media(min-width: 769px){
+  .formulario{
+    width: 40%;
+  }
+
+    .agregar>h2{
+        font-size: 32px;
+        line-height: 38px;
+        align-self: center;
+        margin-left: -200px;
+    }
+
+    .agregar>input{
+        width: 559px;
+        height: 56px;
+    }
+
+    .agregar>textarea{
+        width: 559px;
+        height: 85px;
+    }
+
+    .agregar>input:last-child{
+        width: 559px;
+        height: 51px;
+        font-size: 18px;
+    }
+}
+
